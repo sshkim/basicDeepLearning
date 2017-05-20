@@ -12,11 +12,11 @@ W2 = tf.Variable(0.1)
 b = tf.Variable(0.1)
 
 x1_train = x1_train / np.max(x1_train)
-y_train = y_train / np.max(y_train)
+# y_train = y_train / np.max(y_train)
 
 hypothesis = W1 * x1_train + W2 * x2_train + b
 cost = tf.reduce_mean(tf.square(hypothesis - y_train))
-train = tf.train.GradientDescentOptimizer(0.01).minimize(cost)
+train = tf.train.GradientDescentOptimizer(0.2).minimize(cost)
 
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
