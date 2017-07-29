@@ -1,2 +1,1 @@
-# first_step_ML
-Study ML
+Basic Deep Learnings
