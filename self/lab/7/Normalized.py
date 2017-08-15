@@ -4,7 +4,6 @@ import numpy as np
 def Normalized(data):
     numerator = data - np.min(data, 0)
     denominator = np.max(data, 0) - np.min(data, 0)
-    # noise term prevents the zero division
     return numerator / (denominator + 1e-7)
 
 xy = np.array([[828.659973, 833.450012, 908100, 828.349976, 831.659973],

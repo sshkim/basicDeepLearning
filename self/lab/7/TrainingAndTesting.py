@@ -18,7 +18,7 @@ hypothesis = tf.nn.softmax(logits)
 cost_i = tf.nn.softmax_cross_entropy_with_logits(logits=logits, labels=Y)
 cost = tf.reduce_mean(cost_i)
 
-train = tf.train.GradientDescentOptimizer(learning_rate=100).minimize(cost)
+train = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
 
 prediction = tf.argmax(hypothesis, 1)
 
